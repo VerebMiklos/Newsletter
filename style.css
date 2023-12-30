@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--dark-slate-grey);
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.8rem;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+
+
+}
+
+.card {
+    display: flex;
+}
+
+/* container start */
+
+
+.inactive{
+    display: none;
+}
+
+.container {
+    background-color: var(--white);
+    display: flex;
+    max-width: 900px;
+    border-radius: 18px;
+    padding: 10px;
+    height: auto;
+}
+
+.left {
+    padding: 10px;
+    padding-left: 50px;
+    margin-top: 100px;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    place-content: middle;
+
+}
+
+.left h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: var(--dark-slate-grey);
+    font-family: Roboto;
+    font-weight: 800;
+}
+
+.left p {
+    color: var(--charcoal-grey);
+    padding-bottom: 20px;
+}
+
+.left ul li {
+    list-style-image: url(./assets/images/icon-list.svg);
+    list-style-position: inside;
+    color: var(--charcoal-grey);
+}
+
+.left ul li::before {
+    content: ' ';
+    margin-right: 10px;
+}
+
+.right {
+    display: flex;
+    width: 55%;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.right img {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 90%;
+    font-weight:501;
+}
+
+.left-label {
+    color: var(--dark-slate-grey);
+}
+
+/* Change the z index */
+
+.label .right-label {
+    /* margin-left: 155px; */
+    z-index: -1;
+    color: rgba(255,15,15,1);
+}
+
+
+.email {
+    color: var(--charcoal-grey);
+    height: 3rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--charcoal-grey);
+    background-color: var(--white);
+    font-size: 16px;
+    font-family: Roboto;
+    text-indent: 2rem;
+}
+
+.email.active:hover {
+    background-color: rgba(255,15,15,0.2);
+    transition: 0.25s ease-in-out ;
+}
+
+.subscribe-btn {
+    height: 3rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: 700;
+    border: 0;
+    border-radius: 10px;
+}
+
+.subscribe-btn:hover {
+        background: linear-gradient(90deg, rgba(255, 98, 87, 1) 0%, rgba(242,226,7,1) 95%);
+}
+
+
+/* container end */
+
+
+/* success container start */
+
+
+.inactive{
+    display: none;
+}
+
+.succes-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    background-color: var(--white);
+    height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    line-height: initial;
+
+}
+
+.succes-container img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+.succes-container h1 {
+    color: var(--dark-slate-grey);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.succes-container p {
+    margin-bottom: 1.5rem;
+}
+
+.succes-container p b {
+    color: var(--dark-slate-grey);
+}
+
+.dismiss-btn {
+    height: 3rem;
+    background-color: var(--dark-slate-grey);
+    border: 0;
+    border-radius: 10px;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+.dismiss-btn:hover {
+    background: linear-gradient(90deg, rgba(255, 98, 87, 1) 0%, rgba(242,226,7,1) 95%);
+}
+
+/* success container end */
+
+@media (max-width: 892px){
+    body {
+        display: flex;
+        line-height: 1.3rem;
+        align-items: center;
+        
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        padding: 20px;
+        max-width: 100%;
+        line-height: 1.5rem;
+    }
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+    .left ul li{
+        padding: 5px;
+    }
+
+    .inactive {
+        display: none;
+    }
+
+    #newsletter-img {
+        content: url(./assets/images/illustration-sign-up-mobile.svg);
+    }
+
+}
